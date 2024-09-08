@@ -1,14 +1,14 @@
 /* Global Styles */
 body {
     margin: 0;
-    font-family: 'Merriweather', serif; /* Use Merriweather font for questions page */
-    background-color: #0a0f2c; /* Dark background for both screens */
+    font-family: 'Merriweather', serif;
+    background-color: #0a0f2c;
     color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative; /* Allow positioning of the back button */
+    position: relative;
 }
 
 /* Welcome Screen Styles */
@@ -17,7 +17,7 @@ body {
 }
 
 .title {
-    font-size: 6rem; /* Massive letters */
+    font-size: 6rem;
     font-weight: bold;
     margin: 0 0 20px;
 }
@@ -29,7 +29,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    color: #0a0f2c; /* Dark color for contrast */
+    color: #0a0f2c;
 }
 
 #start-btn:hover {
@@ -42,39 +42,50 @@ body {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 800px; /* Max width for larger screens */
+    max-width: 800px;
+    position: relative;
+    margin-top: -125px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .question-box {
-    border: 5px solid beige; /* Beige square outline */
+    border: 5px solid beige;
     padding: 20px;
     width: 100%;
-    height: 60vh; /* Height to create a TV screen look */
+    max-width: 800px;
+    height: 55vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Scroll if the text is too long */
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+    margin-top: 10px;
 }
 
 #question-text {
-    text-align: center;
-    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-size: 1rem;
+    padding: 10px;
     line-height: 1.5;
+    white-space: pre-wrap;
 }
 
-#next-btn {
-    margin-top: 30px; /* Slight margin to place button just outside the question box */
+#pause-btn, #next-btn {
     padding: 10px 20px;
     font-size: 1.2rem;
     background-color: beige;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    color: #0a0f2c; /* Dark color for contrast */
-    position: relative; /* Position button relative to the container */
+    color: #0a0f2c;
 }
 
-#next-btn:hover {
+#pause-btn:hover, #next-btn:hover {
     background-color: #ddd;
 }
 
@@ -85,13 +96,57 @@ body {
     padding: 10px 20px;
     font-size: 1.2rem;
     background-color: beige;
-    border: navy;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
-    color: #0a0f2c; /* Dark color for contrast */
-    z-index: 1; /* Ensure the button is above other content */
+    color: #0a0f2c;
+    z-index: 1;
 }
 
 #back-btn:hover {
     background-color: #ddd;
+}
+
+/* User Input Styles */
+#answer-input-container {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#answer-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid beige;
+    border-radius: 5px;
+    background-color: #0a0f2c;
+    color: beige;
+    width: 100%;
+    max-width: 400px;
+}
+
+#answer-input:focus {
+    outline: none;
+    border-color: #ddd;
+}
+
+#submit-answer-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: beige;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #0a0f2c;
+    margin-top: 10px;
+}
+
+#submit-answer-btn:hover {
+    background-color: #ddd;
+}
+
+#answer-container {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
 }
